@@ -1,0 +1,6 @@
+{
+    "Train_Semi": false,
+    "Train_from_checkpoint": false,
+    "Epoch": 20,
+    "Num_Test": 40
+}
