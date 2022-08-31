@@ -22,33 +22,22 @@ The platform only support
 ## Operating manual
 + Iroduction of Directories
 
-	├─prepare_data   
-	│  ├─without_annotation	(For about to label the image)  
-	│  │  └─train  
-	│  │          
-	│  └─with_annotation  
-	│      ├─test	(For validation)  
-	│      └─train 	(For training)  
-	
-```
-project
-│   README.md
-│   file001.txt    
-│
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
-```
-	For example,
+	```
+	prepare_data
+	│   README.md
+	│   file001.txt    
+	│
+	└───without_annotation	(For about to label the image)  
+	│   │   
+	│   └───train
+	│
+	└───with_annotation
+		│   
+		└───train (For validation)
+		│
+		└───train (For training)
+	```
+
 
 ## Resources
 + https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3 (For yolo training)
