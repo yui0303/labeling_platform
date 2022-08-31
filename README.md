@@ -22,7 +22,7 @@ The platform only support
 ## Operating manual
 + Iroduction of Directories
 
-	├─prepare_data 
+	├─prepare_data   
 	│  ├─without_annotation	(For about to label the image)  
 	│  │  └─train  
 	│  │          
