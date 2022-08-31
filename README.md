@@ -21,44 +21,73 @@ The platform only support
 
 ## Operating manual
 + Iroduction of Directories
-
-	```
-	prepare_data
-	│
-	└───without_annotation	(For images about to label)  
-	│   └───train
-	└───with_annotation 
-		└───test (For validation)
-		└───train (For training)
-	```
-	For example, 
-	```
-	prepare_data
-	│
-	└───without_annotation
-	│   │   
-	│   └───train
-	│   	└───1.jpg
-	│   	└───2.jpg
-	│   	└───3.jpg
-	│       │   ...
-	│
-	└───with_annotation  
-	│	└───test
-	│	│	└───a1.jpg
-	│	│	└───a1.xml
-	│	│	└───a2.jpg
-	│	│	└───a2.xml
-	│   │   │   ...
-	│   │   
-	│	└───train
-	│	│	└───b1.jpg
-	│	│	└───b1.xml
-	│	│	└───b2.jpg
-	│	│	└───b2.xml
-	│   │   │   ...
-	```
-
+	- Prepare Data
+		```
+		prepare_data
+		│
+		└───without_annotation	(For images about to label) 
+		│   └───train
+		└───with_annotation
+			└───test (For validation)
+			└───train (For training)
+		```
+		For example, 
+		```
+		prepare_data
+		│
+		└───without_annotation
+		│   │   
+		│   └───train
+		│   	└───1.jpg
+		│   	└───2.jpg
+		│   	└───3.jpg
+		│       │   ...
+		│
+		└───with_annotation  
+		│	└───test
+		│	│	└───a1.jpg
+		│	│	└───a1.xml
+		│	│	└───a2.jpg
+		│	│	└───a2.xml
+		│   │   │   ...
+		│   │   
+		│	└───train
+		│	│	└───b1.jpg
+		│	│	└───b1.xml
+		│	│	└───b2.jpg
+		│	│	└───b2.xml
+		│   │   │   ...
+		```
+		
+		If you not sure which should be the test dataset, put all labeled images in train directory(with_annotation).  
+		And Set the parameter for test dataset later.
+		e.g.
+		```
+		prepare_data
+		│
+		└───without_annotation
+		│   │   
+		│   └───train
+		│   	└───1.jpg
+		│   	└───2.jpg
+		│   	└───3.jpg
+		│       │   ...
+		│
+		└───with_annotation  
+		│	└───test
+		│	│  
+		│	└───train
+		│	└───a1.jpg
+		│	│	└───a1.xml
+		│	│	└───a2.jpg
+		│	│	└───a2.xml
+		│	│	└───b1.jpg
+		│	│	└───b1.xml
+		│	│	└───b2.jpg
+		│	│	└───b2.xml
+		│   │   │   ...
+		```
+	
 ## Resources
 + https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3 (For yolo training)
 + https://github.com/AlexeyAB/darknet (For initial yolo weight)
