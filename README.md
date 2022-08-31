@@ -42,7 +42,7 @@ The platform only support
 		│   	└───1.jpg
 		│   	└───2.jpg
 		│   	└───3.jpg
-		│          ...
+		│		│	...
 		│
 		└───with_annotation  
 		│	└───test
@@ -50,14 +50,14 @@ The platform only support
 		│	│	└───a1.xml
 		│	│	└───a2.jpg
 		│	│	└───a2.xml
-		│   │      ...
-		│   │   
+		│	│	│	...
+		│   │
 		│	└───train
 		│	│	└───b1.jpg
 		│	│	└───b1.xml
 		│	│	└───b2.jpg
 		│	│	└───b2.xml
-		│   │   ...
+		│	│	│	...
 		```
 		
 		If you not sure which should be the test dataset, put all labeled images in train directory(with_annotation).  
@@ -69,14 +69,14 @@ The platform only support
 		└───without_annotation
 		│   │   
 		│   └───train
-		│   	└───1.jpg
-		│   	└───2.jpg
-		│   	└───3.jpg
-		│       │   ...
+		│		└───1.jpg
+		│		└───2.jpg
+		│		└───3.jpg
+		│		│	...
 		│
 		└───with_annotation  
 		│	└───test
-		│	│  
+		│	│
 		│	└───train
 		│		└───a1.jpg
 		│		└───a1.xml
@@ -86,7 +86,7 @@ The platform only support
 		│		└───b1.xml
 		│		└───b2.jpg
 		│		└───b2.xml
-		│     	│   ...
+		│		│	...
 		```
 	
 ## Resources
