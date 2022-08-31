@@ -28,8 +28,8 @@ The platform only support
 		└───without_annotation	(For images about to label) 
 		│   └───train
 		└───with_annotation
-		   └───test (For validation)
-		   └───train (For training)
+		    └───test (For validation)
+		    └───train (For training)
 			
 		```
 		For example, 
@@ -52,7 +52,7 @@ The platform only support
 		│   │  └───a2.xml
 		│   │  │  ...
 		│   │
-		│	└───train
+		│   └───train
 		│   │  └───b1.jpg
 		│   │  └───b1.xml
 		│   │  └───b2.jpg
