@@ -119,7 +119,7 @@ The platform only support
 	12. After training, you can press predict button to see the result of the training  
 		Note. prediction is for the images that haven't been labeled yet.  
 	![alt text](https://github.com/yui0303/labeling_platform/blob/main/src/ppt/16.JPG?raw=true)
-	13. Keep doing the steps above until you satisfy the result  
+	13. Keep doing the steps above until you satisfy the result (yolo model is in checkpoints directory)
 	
 ## Resources
 + https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3 (For yolo training)
