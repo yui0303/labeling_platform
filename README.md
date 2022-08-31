@@ -24,20 +24,40 @@ The platform only support
 
 	```
 	prepare_data
-	│   README.md
-	│   file001.txt    
 	│
-	└───without_annotation	(For about to label the image)  
-	│   │   
+	└───without_annotation	(For images about to label)  
 	│   └───train
-	│
-	└───with_annotation
-		│   
-		└───train (For validation)
-		│
+	└───with_annotation 
+		└───test (For validation)
 		└───train (For training)
 	```
-
+	For example, 
+	```
+	prepare_data
+	│
+	└───without_annotation
+	│   │   
+	│   └───train
+	│   	└───1.jpg
+	│   	└───2.jpg
+	│   	└───3.jpg
+	│       │   ...
+	│
+	└───with_annotation  
+	│	└───test
+	│	│	└───a1.jpg
+	│	│	└───a1.xml
+	│	│	└───a2.jpg
+	│	│	└───a2.xml
+	│   │   │   ...
+	│   │   
+	│	└───train
+	│	│	└───b1.jpg
+	│	│	└───b1.xml
+	│	│	└───b2.jpg
+	│	│	└───b2.xml
+	│   │   │   ...
+	```
 
 ## Resources
 + https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3 (For yolo training)
