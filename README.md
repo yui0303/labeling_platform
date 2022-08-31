@@ -56,7 +56,7 @@ The platform only support
 		│	│	└───b1.xml
 		│	│	└───b2.jpg
 		│	│	└───b2.xml
-		│   │   │   ...
+		│   │   ...
 		```
 		
 		If you not sure which should be the test dataset, put all labeled images in train directory(with_annotation).  
