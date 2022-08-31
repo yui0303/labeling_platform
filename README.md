@@ -55,11 +55,11 @@ The platform only support
 		│   │  │  ...
 		│   │
 		│   └───train
-		│   │  └───b1.jpg
-		│   │  └───b1.xml
-		│   │  └───b2.jpg
-		│   │  └───b2.xml
-		│   │  │  ...
+		│     └───b1.jpg
+		│     └───b1.xml
+		│     └───b2.jpg
+		│     └───b2.xml
+		│     │  ...
 		```
 		
 		If you hasn't decided which are the test dataset, put all labeled images in train directory(with_annotation).  
