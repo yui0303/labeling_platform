@@ -30,6 +30,7 @@ The platform only support
 		└───with_annotation
 			└───test (For validation)
 			└───train (For training)
+			
 		```
 		For example, 
 		```
@@ -41,7 +42,7 @@ The platform only support
 		│   	└───1.jpg
 		│   	└───2.jpg
 		│   	└───3.jpg
-		│       │   ...
+		│          ...
 		│
 		└───with_annotation  
 		│	└───test
@@ -49,7 +50,7 @@ The platform only support
 		│	│	└───a1.xml
 		│	│	└───a2.jpg
 		│	│	└───a2.xml
-		│   │   │   ...
+		│   │      ...
 		│   │   
 		│	└───train
 		│	│	└───b1.jpg
@@ -77,15 +78,15 @@ The platform only support
 		│	└───test
 		│	│  
 		│	└───train
-		│	└───a1.jpg
-		│	│	└───a1.xml
-		│	│	└───a2.jpg
-		│	│	└───a2.xml
-		│	│	└───b1.jpg
-		│	│	└───b1.xml
-		│	│	└───b2.jpg
-		│	│	└───b2.xml
-		│   │   │   ...
+		│		└───a1.jpg
+		│		└───a1.xml
+		│		└───a2.jpg
+		│		└───a2.xml
+		│		└───b1.jpg
+		│		└───b1.xml
+		│		└───b2.jpg
+		│		└───b2.xml
+		│     	│   ...
 		```
 	
 ## Resources
