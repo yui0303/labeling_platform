@@ -1,5 +1,14 @@
 # Labeling Platform
 
+## Preface
+It is a website based labeling platform with yolo model training.
+There might sime bug in the system.
+If there are some bugs or problems about the platform, welcome to raise the issue.
+
+The platform only support
+	1. Google Chorme (check whether it is the lastest version)
+	2. XML format label
+
 ## Set the environment
 + Install Anaconda
 	- conda create --name myenv python=3.7.13
@@ -10,7 +19,18 @@
 	- https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 	- put the weight file under model_data directory
 
-## Start Labeling
+## Operating manual
++ Iroduction of Directories
+
+	├─prepare_data 
+	│  ├─without_annotation	(For about to label the image)
+	│  │  └─train
+	│  │          
+	│  └─with_annotation
+	│      ├─test	(For validation)
+	│      └─train 	(For training)
+	
+	For example,
 
 ## Resources
 + https://github.com/pythonlessons/TensorFlow-2.x-YOLOv3 (For yolo training)
