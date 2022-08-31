@@ -78,15 +78,15 @@ The platform only support
 		│	└───test
 		│	│
 		│	└───train
-		│		└───a1.jpg
-		│		└───a1.xml
-		│		└───a2.jpg
-		│		└───a2.xml
-		│		└───b1.jpg
-		│		└───b1.xml
-		│		└───b2.jpg
-		│		└───b2.xml
-		│		│	...
+		│	  └───a1.jpg
+		│	  └───a1.xml
+		│	  └───a2.jpg
+		│	  └───a2.xml
+		│	  └───b1.jpg
+		│	  └───b1.xml
+		│	  └───b2.jpg
+		│	  └───b2.xml
+		│	  │	...
 		```
 	
 ## Resources
