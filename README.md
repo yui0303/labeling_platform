@@ -19,7 +19,7 @@ It is a Independent study project.
 	- Ignore the error prompt as shown below if you have counter
 	![alt text](https://github.com/yui0303/labeling_platform/blob/main/src/version_error.jpg?raw=true)
 + Execute setup.py: for create some directories, including prepare_data, log, ... .
-	- python setup.py
+	- type "python setup.py" in anaconda terminal
 + downloads initial yolo weight:
 	- https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 	- put the weight file under model_data directory
