@@ -98,7 +98,7 @@ It is a Independent study project.
     		
 + Start labeling
 	1. Preapre the dataset and put them to the right directory as above  
-	2. Execute server.py file (type python server.py in anaconda terminal) and open main.html file  
+	2. Execute server.py file (type "python server.py" in anaconda terminal) and open main.html file  
 	![alt text](https://github.com/yui0303/labeling_platform/blob/main/src/ppt/3.JPG?raw=true)
 	3. Change the website download destination(to txtArea)  
 	![alt text](https://github.com/yui0303/labeling_platform/blob/main/src/ppt/4.JPG?raw=true)
