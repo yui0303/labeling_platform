@@ -68,8 +68,8 @@ def Train_Predict():
   os.system("python ./tools/XML_to_YOLOv3.py") # update with annotation xml to yolo
   if data['Train_Semi'] == True: os.system("python ./tools/Predict_XML_to_YOLOv3.py")# update without annotation xml to yolo
   
-  #train()
-  #os.system("python detection_image_from_directory.py 1") # produce pseudo label in without annotation
+  train()
+  os.system("python detection_image_from_directory.py 1") # produce pseudo label in without annotation
   return 'Succeed.'
 
 
