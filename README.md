@@ -8,6 +8,8 @@ If there are some bugs or problems about the platform, welcome to raise the issu
 The platform only support  
 	1. Google Chorme (check whether it is the lastest version)  
 	2. XML format label  
+	
+It is a Independent study project.
 
 ## Set the environment
 + Install Anaconda
