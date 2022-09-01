@@ -2,7 +2,7 @@
 
 ## Preface
 It is a website based labeling platform with yolo model training.  
-There might sime bug in the system.  
+There might some bugs in the system.  
 If there are some bugs or problems about the platform, welcome to raise the issue.  
 
 The platform only support  
