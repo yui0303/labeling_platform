@@ -23,7 +23,7 @@ It is a Independent study project.
 + downloads initial yolo weight:
 	- https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 	- put the weight file under model_data directory
-+ Set chorme download route:
++ Set chorme download route (or do it later):
 	- open chrome > setting > download > change the location into "your\path\to\labeling_platform-main\txtArea" > click "do not ask after download"
 
 ## Operating manual
