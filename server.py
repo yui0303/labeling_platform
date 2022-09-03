@@ -68,6 +68,12 @@ def Train_Predict():
   os.system("python ./tools/XML_to_YOLOv3.py") # update with annotation xml to yolo
   if data['Train_Semi'] == True: os.system("python ./tools/Predict_XML_to_YOLOv3.py")# update without annotation xml to yolo
   
+  global TRAIN_EPOCHS, TRAIN_FROM_CHECKPOINT, TRAIN_CLASSES, TRAIN_ANNOT_PATH
+  TRAIN_EPOCHS = data['Epoch']
+  TRAIN_FROM_CHECKPOINT       = "checkpoints/yolov4_custom" if data["Train_from_checkpoint"] == True else False
+  TRAIN_CLASSES               = "model_data/class_names.txt" if data['Train_Semi'] == False else "model_data/semi_model_data/class_names.txt"
+  TRAIN_ANNOT_PATH            = "model_data/class_train.txt" if data['Train_Semi'] == False else "model_data/semi_model_data/class_train.txt"
+  print('Epochs:', TRAIN_EPOCHS)
   train()
   os.system("python detection_image_from_directory.py 1") # produce pseudo label in without annotation
   return 'Succeed.'
