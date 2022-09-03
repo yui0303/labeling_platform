@@ -23,8 +23,8 @@ It is a Independent study project.
 + downloads initial yolo weight:
 	- https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
 	- put the weight file under model_data directory
-+ set annotation route:
-	- open chrome > setting > download > change the location into "C:\...\labeling_platform-main\txtArea" > click "do not ask after download"
++ Set chorme download route:
+	- open chrome > setting > download > change the location into "your\path\to\labeling_platform-main\txtArea" > click "do not ask after download"
 
 ## Operating manual
 + Iroduction of Directories
