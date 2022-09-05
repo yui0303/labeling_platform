@@ -22,9 +22,11 @@ data_dir = '/prepare_data/without_annotation/'
 Dataset_names_path = "model_data/semi_model_data/class_names.txt"
 Dataset_train = "model_data/semi_model_data/class_train.txt"
 Dataset_test = "model_data/semi_model_data/class_test.txt"
-is_subfolder = True
+is_subfolder = False
 
 Dataset_names = []
+with open ('model_data/class_names.txt') as f:
+    Dataset_names = f.read().splitlines()
       
 def ParseXML(img_folder, file):
     for xml_file in glob.glob(img_folder+'/*.xml'):
