@@ -61,6 +61,11 @@ def toxml():
     img_name_list=[]
     path = os.listdir('txtArea')
     for n in path:
+        if n.endswith(').txt'):
+            os.remove('txtArea/'+n.split('.')[0]+'.jpg.txt')
+            shutil.move('txtArea/'+n,'txtArea/'+n.split('.')[0]+'.jpg.txt')
+    path = os.listdir('txtArea')
+    for n in path:
         if not(n.endswith('txt')):
             continue
         f = open('txtArea/'+n)
@@ -128,8 +133,8 @@ def toxml():
         xmlstr = minidom.parseString(ET.tostring(tree._root)).toprettyxml(indent="   ")
         with open('prepare_data/with_annotation/train/'+n.split('_')[-1].split('.')[0]+'.xml', "w") as f:
             f.write(xmlstr)
-        
-        os.remove('txtArea/'+n)
+        shutil.move('txtArea/'+n,'txtTemp/'+n)
+        #os.remove('txtArea/'+n)
     #print(img_name_list)
 
     for i in img_name_list:

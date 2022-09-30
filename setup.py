@@ -11,3 +11,4 @@ if not os.path.isdir('./prepare_data/without_annotation'):os.mkdir('./prepare_da
 if not os.path.isdir('./prepare_data/with_annotation/train'):os.mkdir('./prepare_data/with_annotation/train')
 if not os.path.isdir('./prepare_data/with_annotation/test'):os.mkdir('./prepare_data/with_annotation/test')
 if not os.path.isdir('./prepare_data/without_annotation/train'):os.mkdir('./prepare_data/without_annotation/train')
+if not os.path.isdir('./txtTemp'):os.mkdir('./txtTemp')
