@@ -177,6 +177,7 @@ def get_mAP(Yolo, dataset, score_threshold=0.25, iou_threshold=0.50, TEST_INPUT_
     # Calculate the AP for each class
     sum_AP = 0.0
     ap_dictionary = {}
+    dictionary_list = []
     # open file to store the results
     with open("mAP/results.txt", 'w') as results_file:
         results_file.write("# AP and precision/recall per class\n")
@@ -261,16 +262,24 @@ def get_mAP(Yolo, dataset, score_threshold=0.25, iou_threshold=0.50, TEST_INPUT_
             rounded_rec = [ '%.3f' % elem for elem in rec ]
             # Write to results.txt
             results_file.write(text + "\n Precision: " + str(rounded_prec) + "\n Recall   :" + str(rounded_rec) + "\n\n")
-
+            dictionary = {
+                "Obj" : class_name,
+                "AP"  : ap*100
+            }
+            dictionary_list.append(dictionary)
             print(text)
             ap_dictionary[class_name] = ap
 
         results_file.write("\n# mAP of all classes\n")
         mAP = sum_AP / n_classes
-
+        
         text = "mAP = {:.3f}%, {:.2f} FPS".format(mAP*100, fps)
         results_file.write(text + "\n")
         print(text)
+        
+        with open("mAP/ap.json", 'w') as apf:
+            jsonString = json.dumps(dictionary_list)
+            apf.write(jsonString)
         
         return mAP*100
 

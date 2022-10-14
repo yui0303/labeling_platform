@@ -50,11 +50,13 @@ def ParseXML(img_folder, file):
         print(img_path)
         file.write(img_path+'\n')
 
-def run_XML_to_YOLOv3():
+def run_XML_to_YOLOv3(dir = data_dir):
     for i, folder in enumerate(['train']):
         with open([Dataset_train,Dataset_test][i], "a") as file:
-            print(os.getcwd()+data_dir+folder)
-            img_path = os.path.join(os.getcwd()+data_dir+folder)
+            #print(os.getcwd()+dir+folder)
+            if dir == '/augmentation/': img_path = os.path.join(os.getcwd()+dir)
+            else: img_path = os.path.join(os.getcwd()+dir+folder)
+            print(img_path)
             if is_subfolder:
                 for directory in os.listdir(img_path):
                     xml_path = os.path.join(img_path, directory)
@@ -69,3 +71,4 @@ def run_XML_to_YOLOv3():
             file.write(str(name)+'\n')
 
 run_XML_to_YOLOv3()
+run_XML_to_YOLOv3(dir = '/augmentation/')
