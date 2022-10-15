@@ -33,6 +33,33 @@ def index():
                         ,Train_from_checkpoint=[{'name':'False'}, {'name':'True'}]
                         ,total_len = train_len + test_len + txtArea_len - 10)
 
+@app.route('/Reset_all_file/')
+def Reset_all_file():
+    ex = ['.jpg', '.png']
+    
+    train_img_path_list = ['./prepare_data/with_annotation/train/' + f for f in os.listdir('./prepare_data/with_annotation/train') if f.endswith(tuple(ex))]
+    test_img_path_list = ['./prepare_data/with_annotation/test/' + f for f in os.listdir('./prepare_data/with_annotation/test') if f.endswith(tuple(ex))]
+    txt_img_path_list = [f for f in os.listdir('./txtTemp')]
+
+    for i in train_img_path_list:
+            file_name = i.split('/')[-1]
+            print(file_name)
+            shutil.move(i, './prepare_data/without_annotation/train/' + file_name)
+            print('./prepare_data/with_annotation/' + 'train' + file_name.split('.')[0] + '.xml')
+            shutil.move('.' + i.split('.')[-2] + '.xml', './prepare_data/without_annotation/train/'  + file_name.split('.')[0] + '.xml')
+        
+    for i in test_img_path_list:
+            file_name = i.split('/')[-1]
+            print(file_name)
+            shutil.move(i, './prepare_data/without_annotation/train/' + file_name)
+            print('./prepare_data/with_annotation/' + 'test' + file_name.split('.')[0] + '.xml')
+            shutil.move('.' + i.split('.')[-2] + '.xml', './prepare_data/without_annotation/train/'  + file_name.split('.')[0] + '.xml')
+
+    for i in txt_img_path_list:
+            shutil.move('txtTemp/'+i,'txtArea/'+i)
+    return 'Succeed.'
+
+
 @app.route('/Train_Predict/')
 def Train_Predict():
   toxml() # modify label, move to with annotation from without (need to delete original xml in without annotation)
