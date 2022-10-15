@@ -32,7 +32,7 @@ for file in xml_list:
     tree = ET.parse(os.path.join(target_dir,file))
     root = tree.getroot()
     for obj in root.findall('object'):
-        root.find('filename').text = filename_without_extension + '_noise.xml'
+        root.find('filename').text = filename_without_extension + '_noise.jpg'
         if obj.find('name').text == minObj:
             tree.write(os.path.join(dest_dir, filename_without_extension + '_noise.xml'))
             #shutil.copy(os.path.join(target_dir,filename_without_extension + '.jpg'), os.path.join(dest_dir, filename_without_extension + '_1.jpg')) # copy jpg to argumentation dir

@@ -54,7 +54,7 @@ def run_XML_to_YOLOv3(dir = data_dir):
     for i, folder in enumerate(['train']):
         with open([Dataset_train,Dataset_test][i], "a") as file:
             #print(os.getcwd()+dir+folder)
-            if dir == '/augmentation/': img_path = os.path.join(os.getcwd()+dir)
+            if dir == '/augmentation': img_path = os.path.join(os.getcwd()+dir)
             else: img_path = os.path.join(os.getcwd()+dir+folder)
             print(img_path)
             if is_subfolder:
@@ -71,4 +71,4 @@ def run_XML_to_YOLOv3(dir = data_dir):
             file.write(str(name)+'\n')
 
 run_XML_to_YOLOv3()
-run_XML_to_YOLOv3(dir = '/augmentation/')
+run_XML_to_YOLOv3(dir = '/augmentation')
