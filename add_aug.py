@@ -24,16 +24,30 @@ if os.path.exists('augmentation'):
 else: os.mkdir('augmentation')
 target_dir = './prepare_data/with_annotation/train/'
 dest_dir = './augmentation/'
+
 xml_list = [x for x in os.listdir(target_dir) if x.endswith('xml')]
+
+aug_obj_list = []
+
+for obj in data:
+    if obj["AP"] < 60:
+        aug_obj_list.append(obj["Obj"])
+        
+#print(aug_obj_list)
+
+'''
 minObjItem = min(data, key=lambda x:x['AP'])
 minObj = minObjItem["Obj"]
+'''
+
+
 for file in xml_list:
     filename_without_extension = file.split('.')[0]
     tree = ET.parse(os.path.join(target_dir,file))
     root = tree.getroot()
     for obj in root.findall('object'):
         root.find('filename').text = filename_without_extension + '_noise.jpg'
-        if obj.find('name').text == minObj:
+        if obj.find('name').text in aug_obj_list:
             tree.write(os.path.join(dest_dir, filename_without_extension + '_noise.xml'))
             #shutil.copy(os.path.join(target_dir,filename_without_extension + '.jpg'), os.path.join(dest_dir, filename_without_extension + '_1.jpg')) # copy jpg to argumentation dir
             img = Image.open(os.path.join(target_dir,filename_without_extension + '.jpg')).convert('RGB')

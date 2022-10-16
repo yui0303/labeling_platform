@@ -44,5 +44,6 @@ for img in img_list:
     path = os.path.join(img_dir, img)
     filename = os.path.splitext(img)[0]
     output_path = ''
-    detect_image(yolo, path, output_path, input_size=YOLO_INPUT_SIZE, show=False, CLASSES=TRAIN_CLASSES, rectangle_colors=(255,0,0), XML = XML, filename = filename)
-    # print('\033[91m', img, "detection finished.", '\033[0m')
+    
+    detect_image(yolo, path, output_path, input_size=YOLO_INPUT_SIZE, show=False, CLASSES=TRAIN_CLASSES, rectangle_colors=(255,0,0), XML = True, filename = filename)
+    #print('\033[91m', img, "detection finished.", '\033[0m')
