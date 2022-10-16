@@ -28,12 +28,12 @@ def index():
     test_len = len([f for f in os.listdir('./prepare_data/with_annotation/test') if f.endswith(tuple(ex))])
     txtArea_len = len([f for f in os.listdir('./txtArea') if f.endswith('.txt')])
     
-    temp = train_len + test_len + txtArea_len - 10
+    total_len = train_len + test_len + txtArea_len - 10
  
     return render_template('index.html'
                         ,Train_Semi=[{'name':'False'}, {'name':'True'}]
                         ,Train_from_checkpoint=[{'name':'False'}, {'name':'True'}]
-                        ,total_len = train_len + test_len + txtArea_len - 10
+                        ,total_len = total_len
                         ,init_test_num = test_len if test_len > 0 else int(str(total_len*0.2)[0])*10**(len(str(total_len*0.2).split('.')[0])-1)
                         )
 
