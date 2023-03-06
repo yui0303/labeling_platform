@@ -29,12 +29,14 @@ def index():
     txtArea_len = len([f for f in os.listdir('./txtArea') if f.endswith('.txt')])
     
     total_len = train_len + test_len + txtArea_len - 10
- 
+    twenty_percent = max(0, (total_len+10) *0.2)
+    #print(twenty_percent)
+    
     return render_template('index.html'
                         ,Train_Semi=[{'name':'False'}, {'name':'True'}]
                         ,Train_from_checkpoint=[{'name':'False'}, {'name':'True'}]
                         ,total_len = total_len
-                        ,init_test_num = test_len if test_len > 0 else int(str(total_len*0.2)[0])*10**(len(str(total_len*0.2).split('.')[0])-1)
+                        ,init_test_num = test_len if test_len > 0 else max(20, int(str(twenty_percent)[0])*10**(len(str(twenty_percent).split('.')[0])-1))
                         )
 
 @app.route('/Reset_all_file/')
